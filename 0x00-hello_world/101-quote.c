@@ -1,16 +1,16 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 /**
- *main-printing on sterr without
- *printf or put
+ * main - Entry point
  *
- *Return: 1
+ * Return: Always 1 (Error code)
  */
 int main(void)
 {
-	char *line_to_print = "and that piece of art is useful"
-				" -Dora Korpar, 2015-10-19\"";
+	char *line_to_print =
+	"and that piece of art is useful\"-Dora Korpar, 2015-10-19\n";
 
 	fwrite(line_to_print, sizeof(char), strlen(line_to_print), stderr);
 	return (1);
 }
+
