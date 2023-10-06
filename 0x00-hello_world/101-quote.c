@@ -8,8 +8,8 @@
  */
 int main(void)
 {
-	char *line_to_print = "and that piece of art is useful\" -\
-			       Dora Korpar, 2015-10-19";
+	char *line_to_print = "and that piece of art is useful"
+				" -Dora Korpar, 2015-10-19\""
 
 	fwrite(line_to_print, sizeof(char), strlen(line_to_print), stderr);
 	return (1);
