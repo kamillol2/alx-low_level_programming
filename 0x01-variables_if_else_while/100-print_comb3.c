@@ -15,7 +15,7 @@ int main(void)
 	
 	for (loop = 48 ; loop < 58; loop++)
 	{
-		for (loop_in = loop + 1 ; loop < 58; loop++)
+		for (loop_in = loop + 1 ; loop < 58; loop_in++)
 		{	
 			putchar(loop);
 			putchar(loop_in);
