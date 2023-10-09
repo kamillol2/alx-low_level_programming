@@ -13,8 +13,11 @@ int main(void)
 	for (loop = 48 ; loop < 58; loop++)
 	{
 		loop = putchar(loop);
-		putchar(44);
-		putchar(32);
+		if (loop != 58)
+		{
+			putchar(44);
+			putchar(32);
+		}
 	}
 	putchar('\n');
 	return (0);
