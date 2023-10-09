@@ -15,5 +15,6 @@ int main(void)
 		lower_case = putchar(lower_case);
 	for (lower_case = 'A'; lower_case <= 90; lower_case++)
 		lower_case = putchar(lower_case);
+	printf("\n");
 	return (0);
 }
