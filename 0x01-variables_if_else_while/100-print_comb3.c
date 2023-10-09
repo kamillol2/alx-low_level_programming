@@ -19,7 +19,7 @@ int main(void)
 		{	
 			putchar(loop);
 			putchar(loop_in);
-			if (loop_in != 56)
+			if (loop != 56)
 			{
 				putchar(44);
 				putchar(32);
