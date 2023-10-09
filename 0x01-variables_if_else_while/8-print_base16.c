@@ -17,6 +17,6 @@ int main(void)
 		loop = putchar(loop);
 	for (loop = 97; loop < 103; loop++)
 		loop = putchar(loop);
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
