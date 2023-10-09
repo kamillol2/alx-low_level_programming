@@ -21,5 +21,6 @@ int main(void)
 			loop = putchar(loop);
 		}
 	}
+	printf("\n");
 	return (0);
 }
