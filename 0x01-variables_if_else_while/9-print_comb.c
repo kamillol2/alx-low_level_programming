@@ -13,7 +13,7 @@ int main(void)
 	for (loop = 48 ; loop < 58; loop++)
 	{
 		loop = putchar(loop);
-		if (loop != 58)
+		if (loop != 57)
 		{
 			putchar(44);
 			putchar(32);
