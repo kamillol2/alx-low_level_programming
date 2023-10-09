@@ -14,5 +14,6 @@ int main(void)
 
 	for (loop = 48; loop < 58; loop++)
 		loop = putchar(loop);
+	printf("\n");
 	return (0);
 }
