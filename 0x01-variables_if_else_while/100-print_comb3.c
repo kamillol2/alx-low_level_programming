@@ -19,8 +19,11 @@ int main(void)
 		{	
 			putchar(loop);
 			putchar(loop_in);
-			putchar(44);
-			putchar(32);
+			if (loop_in != 56)
+			{
+				putchar(44);
+				putchar(32);
+			}
 		}
 	}
 	putchar('\n');
