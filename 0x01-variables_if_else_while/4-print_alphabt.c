@@ -16,5 +16,6 @@ int main(void)
 			continue;
 		else
 			lower_case = putchar(lower_case);
+	printf("\n");
 	return (0);
 }
