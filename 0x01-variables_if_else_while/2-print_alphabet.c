@@ -13,5 +13,6 @@ int main(void)
 
 	for (lower_case = 'a'; lower_case <= 122; lower_case++)
 		lower_case = putchar(lower_case);
+	printf("\n");
 	return (0);
 }
