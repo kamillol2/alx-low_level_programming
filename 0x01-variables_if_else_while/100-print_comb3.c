@@ -11,14 +11,16 @@ int main(void)
 {
 	int loop;
 
+	int loop_in;
+	
 	for (loop = 48 ; loop < 58; loop++)
 	{
-		loop = putchar(loop);
-		putchar(44);
-		putchar(32);
-		for (loop = 48 ; loop < 58; loop++)
-		{
-			loop = putchar(loop);
+		for (loop = loop + 1 ; loop < 58; loop++)
+		{	
+			putchar(loop);
+			putchar(loop_in);
+			putchar(44);
+			putchar(32);
 		}
 	}
 	putchar('\n');
