@@ -13,16 +13,23 @@ void times_table(void)
         {
             prod = i * j;
 
-            if (j > 0 && j != 9) 
+            if (j > 0) 
             {
                 _putchar(',');
-                _putchar(' ');	
+                _putchar(' ');
             }
 
             if (prod < 10)
             {
-                _putchar(' ');
-                _putchar('0' + prod);
+		if (j == 0)
+		{
+			_putchar('0' + prod);
+		}
+		else
+		{
+			_putchar(' ');
+			_putchar('0' + prod);
+		}
             }
             else
             {
