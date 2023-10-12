@@ -18,12 +18,10 @@ void times_table(void)
                 _putchar(',');
                 _putchar(' ');
 
-                // Adjust spacing for single-digit results
                 if (prod < 10)
                     _putchar(' ');
             }
 
-            // Print the product
             if (prod < 10)
                 _putchar(' ');
             else
