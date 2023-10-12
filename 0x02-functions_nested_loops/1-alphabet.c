@@ -1,6 +1,6 @@
 #include"main.h"
 /**
-*main-print alphabet
+*print_alphabet-print out the alphabet
 *
 *
 *Return: 0 on success
@@ -14,5 +14,4 @@ void print_alphabet(void)
 	for (i = 0; name[i] != '\0'; i++)
 		_putchar(name[i]);
 	_putchar('\n');
-	return (0);
 }
