@@ -1,48 +1,36 @@
-#include"main.h"
+#include "main.h"
+
 /**
- * times_table-print time tables from 0 to 9
- *
- *
- *
- *
-*/
+ * times_table - print times tables from 0 to 9
+ */
 void times_table(void)
 {
-	int prod, j, i;
+    int prod, j, i;
 
-	for (i = 0; i <= 9; i++)
-	{
-		for (j = 0; j <= 9; j++)
-		{
-			prod = i * j;
-			if (prod >= 10)
-			{
-				if (i * (j - 1) < 10)
-				{
-					_putchar('\b');
-				}
-				_putchar('0' + (prod / 10));
-				_putchar('0' + (prod % 10));
-				if (j != 9)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
-			}
-			else
-			{
-				_putchar(prod / 10);
-				_putchar('0' + (prod % 10));
-				if (j != 9)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-				}
-			}
-		}
-		_putchar('\n');
-	}
+    for (i = 0; i <= 9; i++)
+    {
+        for (j = 0; j <= 9; j++)
+        {
+            prod = i * j;
+            
+            if (j != 0)
+            {
+                _putchar(',');
+                _putchar(' ');
 
+                // Adjust spacing for single-digit results
+                if (prod < 10)
+                    _putchar(' ');
+            }
 
+            // Print the product
+            if (prod < 10)
+                _putchar(' ');
+            else
+                _putchar('0' + (prod / 10));
+
+            _putchar('0' + (prod % 10));
+        }
+        _putchar('\n');
+    }
 }
