@@ -16,8 +16,17 @@ int print_last_digit(int a)
 	}
 	else
 	{
-		a = -(a);
-		last_a = a % 10;
+		if (a == -2147483648)
+			{
+				_putchar('0' + 8);
+				return (8);
+
+			}
+		else
+		{
+			a = -(a);
+			last_a = a % 10;
+		}
 	}
 	_putchar('0' + last_a);
 	return (last_a);

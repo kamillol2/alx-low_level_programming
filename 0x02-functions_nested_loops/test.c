@@ -1,8 +1,13 @@
-#include"main.h"
-
+#include<stdio.h>
+#include<limits.h>
 int main(void)
 {
-        int a = _isalpha('H');
-        _putchar(a +'0');
+        int a = INT_MIN;
+        printf("%d",a);
+
+        int f = a;
+
+        printf("%d",-f);
+
         return(0);
 }
