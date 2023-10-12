@@ -1,12 +1,12 @@
 #include"main.h"
 /**
- *_print_sign-determine the sign of value
+ *print_sign-determine the sign of value
  *@n: is the number given, has to be an int
  *
  *
  *Return: -1 neg 1 pos and 0 for 0
 */
-int _print_sign(int n)
+int print_sign(int n)
 {
 	if (n > 0)
 	{

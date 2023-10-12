@@ -12,7 +12,7 @@ int print_last_digit(int a);
 
 int _abs(int a);
 
-int _print_sign(int n);
+int print_sign(int n);
 
 int _isalpha(int c);
 
