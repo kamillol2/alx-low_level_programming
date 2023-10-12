@@ -1,11 +1,11 @@
 #include"main.h"
 /**
- *main-print alphabet 10x
+ *print_alphabet_x10-print alphabet 10x
  *
  *
- *Return: 0 on success 
+ *Return: 0 on success
 */
-int main(void)
+void print_alphabet_x10(void)
 {
 	char name[] = "abcdefghijklmnopqrstuvwxyz";
 
@@ -14,7 +14,7 @@ int main(void)
 	int j;
 
 	for (j = 0 ; j <= 9; j++)
-        {
+	{
 		for (i = 0; name[i] != '\0'; i++)
 		{
 		_putchar(name[i]);
