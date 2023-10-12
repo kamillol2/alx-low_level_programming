@@ -19,7 +19,7 @@ void times_table(void)
 			{
 				if (i * (j - 1) < 10)
 				{
-					_putchar(8);
+					_putchar('\b');
 				}
 				_putchar('0' + (prod / 10));
 				_putchar('0' + (prod % 10));
