@@ -1,0 +1,15 @@
+#include "main.h"
+/**
+ *print_last_digit-return the last digit of an int
+ *@a: the int to extract digit from
+ *
+ *
+ *Return: last_a which is the last digit
+*/
+int print_last_digit(int a)
+{
+	int last_a = a % 10;
+
+	return (last_a);
+
+}
