@@ -14,5 +14,7 @@ int _isdigit(int c)
 	for (i = 0; i <= 9; i++)
 		if (c == list[i])
 			return (1);
+		if (c >= 48 && c <= 57)
+			return (1);
 	return (0);
 }
