@@ -1,4 +1,5 @@
 #include"main.h"
+#include<stdio.h>
 /**
  *more_numbers-print int from 0 to 9
  *
