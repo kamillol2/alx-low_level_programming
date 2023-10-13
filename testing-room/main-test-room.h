@@ -1,10 +1,16 @@
-#include"main.h"
+#include <unistd.h>
+
 /**
- *more_numbers-print int from 0 to 9
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
  *
- *
- *
-*/
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 
 void more_numbers(void)
 {
@@ -28,4 +34,5 @@ void more_numbers(void)
 		}
 	_putchar('\n');
 	}
+	
 }
