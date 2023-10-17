@@ -9,9 +9,9 @@ void rev_string(char *s)
 {
 	int size = strlen(s) - 1;
 
-	int i;
+	int i = 0;
 
-	while (size > 0)
+	while (size >= 0)
 	{
 		s[i] = s[size];
 		size--;
