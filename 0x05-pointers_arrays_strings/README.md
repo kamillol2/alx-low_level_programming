@@ -1,0 +1,1 @@
+This folder contains the function made for the pointers and arrays project of ALX with an extra folder called output that contains some executables of the functions to test them.
