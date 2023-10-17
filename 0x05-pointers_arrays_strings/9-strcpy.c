@@ -7,7 +7,7 @@
 */
 char *_strcpy(char *dest, char *src)
 {
-	int size = _strlen(dest);
+	int size = strlen(dest);
 
 	int i;
 

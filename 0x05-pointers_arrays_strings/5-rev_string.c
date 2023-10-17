@@ -7,7 +7,7 @@
 */
 void rev_string(char *s)
 {
-	int size = _strlen(s) - 1;
+	int size = strlen(s) - 1;
 
 	char new_s[size];
 
@@ -19,7 +19,7 @@ void rev_string(char *s)
 		size--;
 		i++;
 	}
-	new_s[_strlen(s)] = '\0';
+	new_s[strlen(s)] = '\0';
 	strcpy(s, new_s);
 }
 
