@@ -1,0 +1,1 @@
+This folder contains the answers to the pointers and arrays project 0x06 
