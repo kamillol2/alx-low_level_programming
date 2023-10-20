@@ -1,23 +1,25 @@
-#include "main.h"
 /**
- *char *_strcat-concatenate src to dest and return a pointer to dest
- *@dest: destination of the concatination
- *@src:the string to concatinate
+ * _strcat - main function
  *
- *Return: a char pointer to dest
-*/
+ * Description: 'Concatenate two strings'
+ *
+ * @src: the string to be copied
+ * @dest: the resulte
+ *
+ * Return: dest
+ */
+
 char *_strcat(char *dest, char *src)
 {
-	int len_src = strlen(src);
+	int i, length = 0;
 
-	int len_dest = strlen(dest);
-
-	int i;
-
-	int p = 0;
-
-	for (i = len_dest; i <= (len_src + len_dest); i++, p++)
-		dest[i] = src[p];
-
+	for (i = 0; dest[i] != '\0'; i++)
+	{
+		length++;
+	}
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		dest[length + i] = src[i];
+	}
 	return (dest);
 }

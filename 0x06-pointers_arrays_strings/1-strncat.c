@@ -1,25 +1,27 @@
-#include "main.h"
 /**
- *char *_strncat-concatenate n char from src to dest
- *@dest:receiver of n char from src
- *@src: sender of n char to dest
- *@n: number of char to concatenate
- *Return: char
-*/
+ * _strncat - main function
+ *
+ * Description: 'Concatenate two strings'
+ *
+ * @src: the string to be copied
+ * @dest: the resulte
+ * @n: number of character to coy
+ *
+ * Return: dest
+ */
+
 char *_strncat(char *dest, char *src, int n)
 {
-	int len_src = strlen(src);
+	int i, length = 0;
 
-	int len_dest = strlen(dest);
-
-	if (n > len_dest)
-		n = len_src;
-
-	int i;
-
-	int p = 0;
-
-	for (i = len_dest; i < (n + len_dest); i++, p++)
-		dest[i] = src[p];
+	for (i = 0; dest[i] != '\0'; i++)
+	{
+		length++;
+	}
+	for (i = 0; i < n && src[i] != '\0'; i++)
+	{
+		dest[length + i] = src[i];
+	}
+	dest[length + i] = '\0';
 	return (dest);
 }

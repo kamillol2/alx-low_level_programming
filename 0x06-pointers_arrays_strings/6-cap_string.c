@@ -1,41 +1,40 @@
-#include "main.h"
 /**
- *cap_string-capitalizes all words of a string.
- *@str: the string to work on
+ * cap_string - main function
  *
+ * Description: 'Capitalizes all words of a string'
  *
- *Return: char
-*/
-char *cap_string(char *str)
+ * @s: String to capitalizes
+ *
+ * Return: capitale string
+ */
+
+char *cap_string(char *s)
 {
-	int i, p;
+	int i;
+	char *c = s;
 
-	char H_case[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-	char L_case[] = "abcdefghijklmnopqrstuvwxyz";
-
-	for (i = 0 ; i <= strlen(str) - 1; i++)
+	if (*c <= 122 && *c >= 97)
 	{
-		if (i == 0)
-		{
-			for (p = 0; p <= 27; p++)
-			{
-				if (str[i] == L_case[p])
-					str[i] = H_case[p];
-			}
-		}
-		if (str[i - 1] == ' ' || str[i - 1] == '.' || str[i - 1] == '\t')
-		{
-			for (p = 0; p <= 27; p++)
-			{
-				if (str[i] == L_case[p])
-					str[i] = H_case[p];
-			}
-		}
-		else
-		{
-			continue;
-		}
+		*c -= 32;
 	}
-	return (str);
+
+	for (i = 1; c[i] != '\0'; i++)
+	{
+		if (c[i] <= 122 && c[i] >= 97)
+		{
+			if (c[i - 1] == ',' || c[i - 1] == ';' ||
+			    c[i - 1] == '.' || c[i - 1] == '!' ||
+			    c[i - 1] == '?' || c[i - 1] == '"' ||
+			    c[i - 1] == '(' || c[i - 1] == ')' ||
+			    c[i - 1] == '{' || c[i - 1] == '}' ||
+			    c[i - 1] == ' ' || c[i - 1] == '\n' ||
+			    c[i - 1] == '\t')
+			{
+				c[i] -= 32;
+			}
+		}
+
+	}
+
+	return (s);
 }
