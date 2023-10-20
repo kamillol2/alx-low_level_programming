@@ -1,9 +1,9 @@
 #include"main-test-room.h"
 #include<stdio.h>
-
+#include<string.h>
 int main(void)
 {
-
-    print_triangle(14);
+    int i = strcmp("Hello", "World!");
+    printf("%d",i);
     return (0);
 }
