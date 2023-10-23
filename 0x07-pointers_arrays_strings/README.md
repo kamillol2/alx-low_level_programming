@@ -1,0 +1,1 @@
+This folder contains the answers to the 0x07 project regarding pointers to pointers and N dimesion arrays.
