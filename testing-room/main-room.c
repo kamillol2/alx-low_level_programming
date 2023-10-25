@@ -13,6 +13,7 @@ void print(int nb)
 
 int main(void)
 {
-    print(4);
+    char str[] = {5,8,9,6,7};
+    printf("%c\n",str[-1]);
     return (0);
 }
