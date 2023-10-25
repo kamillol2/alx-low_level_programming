@@ -12,6 +12,7 @@
  * Return: 0 if not prime and 1 if a prime number
  */
 
+int _putchar(char c);
 int checker(int n, int i)
 {
 	if (n < 0 || n == 1)
