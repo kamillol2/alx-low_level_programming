@@ -4,26 +4,15 @@
 #include <unistd.h>
 #include<string.h>
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-/**
  * checker - Check if n is a prime number
  *
  * @n: Number to check
  * @i: Number used to check
  *
- * Return: 0 if not prime and 1 if a prime number 
+ * Return: 0 if not prime and 1 if a prime number
  */
 
-int checker (int n, int i)
+int checker(int n, int i)
 {
 	if (n < 0 || n == 1)
 		return (0);
