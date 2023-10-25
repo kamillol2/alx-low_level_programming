@@ -13,7 +13,7 @@
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
-};
+}
 /**
  * checker - Check if n is a prime number
  *
