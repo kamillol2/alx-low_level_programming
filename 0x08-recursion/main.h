@@ -59,17 +59,17 @@ int check_palindrome(char *s, int start, int end)
 }
 
 /**
- * _strlen_recursion - Calculate the length of a string, using recursion
+ * _strlen_rec - Calculate the length of a string, using recursion
  *
  * @s: String to calculate it length
  *
  * Return: Length of the string s
  */
-int _strlen_recursion(char *s)
+int _strlen_rec(char *s)
 {
 	if (*s == '\0')
 		return (0);
-	return (1 + _strlen_recursion(s + 1));
+	return (1 + _strlen_rec(s + 1));
 }
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);
