@@ -16,10 +16,10 @@ int str_test(char *str)
 	{
 		if (isdigit(str[i]) == 0)
 		{
-			return (0);/*Not digit found*/
+			return (1);/*Not digit found*/
 		}
 	}
-	return (1);/*Only digits*/
+	return (0);/*Only digits*/
 }
 
 /**
@@ -38,9 +38,9 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	for (i = 0; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
-		if (str_test(argv[i]) == 0)
+		if (str_test(argv[i]) == 1)
 		{
 			printf("Error\n");
 			return (1);
