@@ -31,19 +31,25 @@ int str_test(char *str)
 
 int main(int argc, char *argv[])
 {
-	int sum;
+	int sum, i;
 
 	if (argc == 1)
 	{
 		printf("0\n");
 		return (0);
 	}
-	if (str_test(argv[1]) == 1 || str_test(argv[1]) == 1)
+	for (i = 0; i < argc; i++)
 	{
-		printf("Error\n");
-		return (1);
+		if (str_test(argv[i]) == 1)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		else
+		{
+			sum += atoi(argv[i]);
+		}
 	}
-	sum = atoi(argv[1]) + atoi(argv[2]);
 	printf("%d\n", sum);
 	return (0);
 }
