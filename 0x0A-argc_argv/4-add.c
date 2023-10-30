@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 	}
 	for (i = 0; i < argc; i++)
 	{
-		if (str_test(argv[i]) == 1)
+		if (str_test(argv[i]) == 0)
 		{
 			printf("Error\n");
 			return (1);
