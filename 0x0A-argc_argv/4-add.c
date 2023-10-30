@@ -14,12 +14,12 @@ int str_test(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (isdigit(str[i]) == 1)
+		if (isdigit(str[i]) == 0)
 		{
-			return (1);/*Not digit found*/
+			return (0);/*Not digit found*/
 		}
 	}
-	return (0);/*Only digits*/
+	return (1);/*Only digits*/
 }
 
 /**
