@@ -10,7 +10,7 @@
 */
 char *_strdup(char *str)
 {
-	int len_str = strlen(str), i;
+	int len_str = strlen(str) + 1, i;
 
 	char *copy_str = malloc(sizeof(char) * len_str);
 
@@ -18,9 +18,14 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
+	else if (str == NULL)
+	{
+		printf("failed to allocate memory");
+		return (NULL);
+	}
 	else
 	{
-		for (i = 0; i <= len_str; i++)
+		for (i = 0; i < len_str; i++)
 		{
 			copy_str[i] = str[i];
 		}
