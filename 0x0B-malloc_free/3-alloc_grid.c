@@ -15,6 +15,7 @@ int **alloc_grid(int width, int height)
 
 	if (line_dim == NULL)
 	{
+		free(line_dim);
 		return (NULL);
 	}
 	if (width <= 0 || height <= 0)
