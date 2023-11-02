@@ -17,17 +17,17 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL && s2 == NULL)
 	{
-		printf("\n");
+		printf("");
 		return (copy_str);
 	}
 	else if (s1 == NULL)
 	{
-		printf("%s\n", s2);
+		printf("%s", s2);
 		return (copy_str);
 	}
 	else if (s2 == NULL)
 	{
-		printf("%s\n", s1);
+		printf("%s", s1);
 		return (copy_str);
 	}
 	free(copy_str);
