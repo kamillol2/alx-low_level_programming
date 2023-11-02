@@ -11,13 +11,25 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-	int len_str = strlen(s1) + strlen(s2), i, j = 0;
+	int len_str = strlen(s1) + strlen(s2) + 1, i, j = 0;
 
 	char *copy_str = malloc(sizeof(char) * len_str);
 
 	if (copy_str == NULL)
 	{
 		return (NULL);
+	}
+	else if (s1 == NULL && s2 == NULL)
+	{
+		return ("");
+	}
+	else if (s1 == NULL)
+	{
+		return (s2);
+	}
+	else if (s2 == NULL)
+	{
+		return (s1);
 	}
 	else
 	{
