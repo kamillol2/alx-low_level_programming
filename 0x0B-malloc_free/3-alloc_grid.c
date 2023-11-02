@@ -13,7 +13,7 @@ int **alloc_grid(int width, int height)
 	int **line_dim = (int **) malloc((sizeof(int *) * height));
 	int i, j;
 
-	if (*line_dim == NULL)
+	if (line_dim == NULL)
 	{
 		return (NULL);
 	}
