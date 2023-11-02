@@ -11,6 +11,11 @@
 int **alloc_grid(int width, int height)
 {
 	int **line_dim = (int **) malloc((sizeof(int *) * height));
+
+	if (*line_dim == NULL)
+	{
+		return (NULL);
+	}
 	int i, j;
 
 	if (width <= 0 || height <= 0)
