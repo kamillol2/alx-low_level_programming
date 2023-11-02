@@ -13,20 +13,24 @@ char *str_concat(char *s1, char *s2)
 {
 	int len_str, i, j = 0;
 
-	char *copy_str;
+	char *copy_str = malloc(0);
 
 	if (s1 == NULL && s2 == NULL)
 	{
-		return (NULL);
+		printf("\n");
+		return (copy_str);
 	}
 	else if (s1 == NULL)
 	{
-		return (s2);
+		printf("%s\n", s2);
+		return (copy_str);
 	}
 	else if (s2 == NULL)
 	{
-		return (s1);
+		printf("%s\n", s1);
+		return (copy_str);
 	}
+	free(copy_str);
 	len_str = strlen(s1) + strlen(s2) + 1;
 	copy_str = malloc(sizeof(char) * len_str);
 	if (copy_str == NULL)
@@ -39,7 +43,7 @@ char *str_concat(char *s1, char *s2)
 		{
 			copy_str[i] = s1[i];
 		}
-		for (i = strlen(s1); i <= len_str; i++, j++)
+		for (i = strlen(s1); i < len_str; i++, j++)
 		{
 			copy_str[i] = s2[j];
 		}
