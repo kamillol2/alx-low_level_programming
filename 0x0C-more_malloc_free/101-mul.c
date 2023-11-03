@@ -46,8 +46,8 @@ char *mul(char *num1, char *num2)
 	int i, j, index, tmp, carry, len1, len2;
 	char *result;
 
-	len1 = strlen(num1);
-	len2 = strlen(num2);
+	len1 = str_len(num1);
+	len2 = str_len(num2);
 
 	result = malloc(len1 + len2 + 1);
 	if (result == NULL)
@@ -111,6 +111,22 @@ int is_num(char *str)
 		if (str[i] < 48 || str[i] > 57)
 			return (-1);
 	return (0);
+}
+/**
+ * str_len - Calculat the lenght of a string
+ *
+ * @str: String
+ *
+ * Return: Lenght of str
+*/
+int str_len(char *str)
+{
+	int len;
+
+	for (len = 0; str[len]; len++)
+		;
+
+	return (len);
 }
 /**
  * print_exit - Print a string follwed by a new line using _putchar
