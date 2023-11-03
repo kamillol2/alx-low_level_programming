@@ -1,4 +1,7 @@
 #include"main.h"
+#include <stdlib.h>
+#include<string.h>
+#include<stdio.h>
 /**
  *_calloc-does the same thing as calloc with malloc
  *@nmemb: number of cases
@@ -8,18 +11,22 @@
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int i;
-	char *ptr;
+	unsigned int *ptr;
+	int i;
 
-	if (nmemb == 0 || size == 0)
+	if (size == 0)
+	{
 		return (NULL);
+	}
 
-	ptr = malloc(nmemb * size);
+	ptr = malloc(sizeof(size) * nmemb);
 	if (ptr == NULL)
+	{
 		return (NULL);
-
-	for (i = 0; i < nmemb * size; i++)
-		ptr[i] = 0;
-
+	}
+	for (i = 0; i <= (int) size; i++)
+	{
+		*(ptr + i) = 0;
+	}
 	return (ptr);
 }

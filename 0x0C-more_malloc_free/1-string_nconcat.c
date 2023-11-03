@@ -1,7 +1,4 @@
 #include"main.h"
-#include <stdlib.h>
-#include<string.h>
-#include<stdio.h>
 /**
  *string_nconcat-stitch 2 strings together
  *@s1:first string
@@ -12,29 +9,27 @@
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int len_s1 = strlen(s1);
-	int len_s2 = strlen(s2);
-	int full = len_s1 + len_s2 + 1;
-	int i;
-	int j = 0;
-	char *ptr;
+	unsigned int i, len1, len2;
+	char *str;
 
-	if ((int) n < len_s2)
-	{
-		len_s2 = n;
-	}
-	ptr = calloc(full, sizeof(char));
-	if (ptr == NULL)
-	{
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+	n = n > len2 ? len2 : n;
+
+	str = malloc(sizeof(*str) * (len1 + n + 1));
+	if (str == NULL)
 		return (NULL);
-	}
-	for (i = 0; i < len_s1; i++)
-	{
-		*(ptr + i) = s1[i];
-	}
-	for (i = len_s1; i <= len_s1 + len_s2 ; i++, j++)
-	{
-		*(ptr + i) = s2[j];
-	}
-	return (ptr);
+
+	for (i = 0; i < len1; i++)
+		str[i] = s1[i];
+	for (i = 0; i < n; i++)
+		str[len1 + i] = s2[i];
+	str[len1 + n] = '\0';
+
+	return (str);
 }
