@@ -1,0 +1,1 @@
+ALX SE 0x0E project about structures and typedef
